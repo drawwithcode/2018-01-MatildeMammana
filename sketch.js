@@ -20,13 +20,24 @@ function draw() {
 	line(250, 225, 270, 180);
 	line(250, 225, 230, 190);
 
+	//Body
+	noStroke();
+	fill(20,60,173); //Blue
+	arc(250, 345, 170, 300 , 0, 3.14);
+	fill(0, 140, 173, 75.5); //Lightblue
+	arc(250, 345, 130, 200 , 0, 3.14);
+
 	//Arms
-	line(165, 330, 120, 420);
-	line(335, 330, 380, 420);
+	strokeWeight(2);
+	stroke(0);
+	line(165, 330, mouseX, mouseY);
+	line(335, 330, mouseX+100, mouseY);
 
 	noStroke();
 
 	//Shoulders
+	fill(73,168,206);
+	rect(165, 325, 170, 20);
 	fill(73,168,206);
 	ellipse(165, 335, 20);
 	fill(73,168,206);
@@ -44,13 +55,6 @@ function draw() {
 	fill(20,60,173); //Blue
 	rect(260, 480, 20, 30);
 
-	//Body
-	fill(73,168,206);
-	rect(165, 325, 170, 20);
-	fill(20,60,173); //Blue
-	arc(250, 345, 170, 300 , 0, 3.14);
-	fill(0, 140, 173, 75.5); //Lightblue
-	arc(250, 345, 130, 200 , 0, 3.14);
 
 
 	//Ears
@@ -75,5 +79,4 @@ function draw() {
 	fill(0,0,0);
 	ellipse(230,265, 5);
 	ellipse(270,265,5);
-
 }
